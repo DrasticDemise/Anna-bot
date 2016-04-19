@@ -17,6 +17,12 @@ function respond() {
     this.res.end();
   }
 }
+function randomAnnaSaying(){
+	return "\"I'm gonna bop you in the nose! *throws quesadilla*\"";
+}
+function randomAnnaImage(){
+	return "\"http://i.imgur.com/nN0fRAJ.jpg\"";
+}
 
 function postMessage() {
   var botResponse, options, body, botReq;
@@ -56,12 +62,6 @@ function postMessage() {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
   botReq.end(JSON.stringify(body));
-}
-function randomAnnaSaying(){
-	return "\"I'm gonna bop you in the nose! *throws quesadilla*\"";
-}
-function randomAnnaImage(){
-	return "\"http://i.imgur.com/nN0fRAJ.jpg\"";
 }
 
 exports.respond = respond;
