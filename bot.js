@@ -1,8 +1,9 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
+var annaImage = randomAnnaImage();
 var botID = process.env.BOT_ID;
-
+var annaSaying = randomAnnaSaying();
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/anna$/;
@@ -31,7 +32,12 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : "I love Bailey and Chase"
+    "text"    : annaSaying,
+	"attachments" : [
+		{
+		  "type"  : "image",
+		  "url"   : annaImage
+		}
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
@@ -52,6 +58,11 @@ function postMessage() {
   });
   botReq.end(JSON.stringify(body));
 }
-
+function randomAnnaSaying(){
+	return "I'm gonna bop you in the nose! *throws quesadilla*";
+}
+function randomAnnaImage(){
+	return "http://i.imgur.com/nN0fRAJ.jpg";
+}
 
 exports.respond = respond;
