@@ -18,7 +18,18 @@ function respond() {
   }
 }
 function randomAnnaSaying(){
-	
+	var num = Math.random();
+	if(num < 0.2){
+		return "\"REEE REE REE @Chase Green\"";
+	}else if(num < 0.4){
+		return "\"I'm at work\"";
+	}else if(num < 0.6){
+		return "\"I'm gonna bop you in the nose! *throws quesadilla*\"";
+	}else if(num < 0.8){
+		return "\"Lets go to Los Vaqueros!\"";
+	}else{
+		return "\"Why do you hate me??? @Chase Green\"";
+	}
 	return "\"I'm gonna bop you in the nose! *throws quesadilla*\"";
 }
 function randomAnnaImage(){
