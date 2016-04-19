@@ -38,7 +38,7 @@ function postMessage() {
   body = {
     "bot_id" : botID,
     "text"    : "I'm gonna bop you in the nose! *throws quesadilla*",
-	"attachments" : [
+	"attachments" :
 		{
 		  "type"  : "image",
 		  "url"   : "http://i.imgur.com/nN0fRAJ.jpg"
