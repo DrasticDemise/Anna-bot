@@ -18,6 +18,7 @@ function respond() {
   }
 }
 function randomAnnaSaying(){
+	
 	return "\"I'm gonna bop you in the nose! *throws quesadilla*\"";
 }
 function randomAnnaImage(){
@@ -37,7 +38,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text"    : "I'm gonna bop you in the nose! *throws quesadilla*",
+    "text"    : randomAnnaSaying(),
 	"attachments" :
 		{
 		  "type"  : "image",
