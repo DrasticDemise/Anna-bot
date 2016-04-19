@@ -1,9 +1,8 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
-var annaImage = randomAnnaImage();
 var botID = process.env.BOT_ID;
-var annaSaying = randomAnnaSaying();
+
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/anna$/;
@@ -32,11 +31,11 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text"    : annaSaying,
+    "text"    : randomAnnaSaying(),
 	"attachments" : [
 		{
 		  "type"  : "image",
-		  "url"   : annaImage
+		  "url"   : randomAnnaImage()
 		}
   };
 
