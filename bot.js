@@ -37,11 +37,11 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text"    : randomAnnaSaying(),
+    "text"    : "I'm gonna bop you in the nose! *throws quesadilla*",
 	"attachments" : [
 		{
 		  "type"  : "image",
-		  "url"   : randomAnnaImage()
+		  "url"   : "http://i.imgur.com/nN0fRAJ.jpg"
 		}
   };
 
